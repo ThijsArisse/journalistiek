@@ -13,6 +13,7 @@
     "com.unity.xr.interaction.toolkit": "2.6.4",
     "com.unity.xr.management": "4.5.1",
     "com.unity.xr.oculus": "4.5.1",
+    "com.whisper.unity": "file:C:/Users/potat/Documents/GitHub/whisper.unity/Packages/com.whisper.unity",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
