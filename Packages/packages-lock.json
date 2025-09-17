@@ -65,6 +65,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "14.0.11",
       "depth": 1,
@@ -226,6 +233,24 @@
       "source": "git",
       "dependencies": {},
       "hash": "529a628a915a97799e89e061af9cb7c71407124d"
+    },
+    "link.neocortex.ollama": {
+      "version": "https://github.com/neocortex-link/neocortex-ollama-support.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "e717282cdf6da9246e8d3a959b4c053cf5c4a2bd"
+    },
+    "link.neocortex.sdk": {
+      "version": "https://github.com/neocortex-link/neocortex-unity-sdk.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "ee3f65538a784d550f1396b52c1e55e0afa21aaa"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
