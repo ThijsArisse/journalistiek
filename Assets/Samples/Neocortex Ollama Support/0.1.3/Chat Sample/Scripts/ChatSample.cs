@@ -9,6 +9,7 @@ namespace Neocortex.Samples
         [SerializeField] private NeocortexTextChatInput chatInput;
         [SerializeField] private OllamaModelDropdown modelDropdown;
         [SerializeField, TextArea] private string systemPrompt;
+        [SerializeField] private AiManager aiManager;
 
         private OllamaRequest request;
 
@@ -30,13 +31,21 @@ namespace Neocortex.Samples
 
         private void OnChatResponseReceived(ChatResponse response)
         {
-            chatPanel.AddMessage(response.message, false);
-        }
+            Debug.Log(4);
+            aiManager.GetGeneratedMessage(response.message);
+/*            chatPanel.AddMessage(response.message, false);
+*/        }
 
         private void OnUserMessageSent(string message)
         {
+            Debug.Log(2);
             request.Send(message);
-            chatPanel.AddMessage(message, true);
+            /*chatPanel.AddMessage(message, true);*/
+        }
+
+        public void Respond(string text)
+        {
+            chatInput.OnSendButtonClicked.Invoke(text);
         }
     }
 }

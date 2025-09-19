@@ -29,6 +29,8 @@ namespace Whisper.Samples
         
         private string _buffer;
 
+        [SerializeField] private AiManager aiManager;
+
         private void Awake()
         {
             whisper.OnNewSegment += OnNewSegment;
@@ -88,6 +90,7 @@ namespace Whisper.Samples
                 text += $"\n\nLanguage: {res.Language}";
             
             outputText.text = text;
+            aiManager.GetRecordedMessage(text);
             UiUtils.ScrollDown(scroll);
         }
         
