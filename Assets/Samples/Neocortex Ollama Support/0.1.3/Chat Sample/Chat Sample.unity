@@ -915,8 +915,7 @@ MonoBehaviour:
   chatPanel: {fileID: 105820426}
   chatInput: {fileID: 670615324}
   modelDropdown: {fileID: 1970803233}
-  systemPrompt: Act as a obnoxious HR manager, who tries to micromanage everything.
-    Reply in at most 50 words.
+  systemPrompt: Doe alsof je heel erg graag uno wilt spelen
 --- !u!4 &497784075
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,7 +2130,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: gemma3:4b
+  m_Text: gemma3:1b
 --- !u!222 &1520357291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2749,6 +2748,12 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: gemma3:1b
+      m_Image: {fileID: 0}
+    - m_Text: qwen3:4b
+      m_Image: {fileID: 0}
+    - m_Text: qwen3:30b
+      m_Image: {fileID: 0}
     - m_Text: gemma3:4b
       m_Image: {fileID: 0}
   m_OnValueChanged:
