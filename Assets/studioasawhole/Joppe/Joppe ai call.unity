@@ -358,6 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401314755}
   - component: {fileID: 401314754}
+  - component: {fileID: 401314756}
   m_Layer: 0
   m_Name: Ai manager
   m_TagString: Untagged
@@ -394,6 +395,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401314756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401314753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c77eee22d8940f4482fe91789dfdd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  microphoneDemo: {fileID: 1678454324}
+  piperAudioSource: {fileID: 1208902154}
+  silentWaitTime: 3
 --- !u!114 &484022439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1346612639859686281, guid: 34cf1ab44df9f2549b9b6dec813314c2,
@@ -442,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 5787261677488745416, guid: 34cf1ab44df9f2549b9b6dec813314c2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5921015405262566875, guid: 34cf1ab44df9f2549b9b6dec813314c2,
         type: 3}
@@ -1191,6 +1207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f212905d072e9641ae158ce555c599e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1208902154 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8613238905666147685, guid: ad9b338bd97cb8c4782130e7aa3640a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1208902150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1396374175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Demo
       objectReference: {fileID: 0}
+    - target: {fileID: 1253958665094905669, guid: d08130e99d0413d44adeb92f2198dce0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1580732930446639258, guid: d08130e99d0413d44adeb92f2198dce0,
         type: 3}
       propertyPath: vadIndicatorImage
@@ -1721,6 +1748,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1502543805}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1678454324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2285343695271744607, guid: d08130e99d0413d44adeb92f2198dce0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502543805}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c774d83cf4f4d45e29298522e8ba4923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1710076346 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8954766444250389623, guid: 088a5892ba30c2a4a89445b74af1ca77,
@@ -1751,6 +1790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 532623418859869098, guid: 088a5892ba30c2a4a89445b74af1ca77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1128813901177922997, guid: 088a5892ba30c2a4a89445b74af1ca77,
         type: 3}
