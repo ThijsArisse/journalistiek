@@ -12,37 +12,44 @@ namespace Whisper.Samples
         private Coroutine audioCheck;
         private bool isSpeaking = true;
         private bool aiStartSpeak = false;
-
+        private bool isCalling = false;
 
         private void Update()
         {
-            if (isSpeaking)
+            if (isCalling)
             {
-                if (microphoneDemo.microphoneRecord.vadIndicatorImage.color == Color.red)
+                if (isSpeaking)
                 {
-                    if (audioCheck == null)
+                    if (microphoneDemo.microphoneRecord.vadIndicatorImage.color == Color.red)
                     {
-                        audioCheck = StartCoroutine(AudioCheck());
+                        if (audioCheck == null)
+                        {
+                            audioCheck = StartCoroutine(AudioCheck());
+                        }
+                    }
+                    else if (audioCheck != null)
+                    {
+                        StopCoroutine(audioCheck);
+                        audioCheck = null;
                     }
                 }
-                else if (audioCheck != null)
+                else
                 {
-                    StopCoroutine(audioCheck);
-                    audioCheck = null;
+                    if (piperAudioSource.isPlaying)
+                    {
+                        aiStartSpeak = true;
+                    }
+                    else if (aiStartSpeak)
+                    {
+                        isSpeaking = true;
+                        aiStartSpeak = false;
+                        PressSpeakButton();
+                    }
                 }
-            }
-            else 
+            } 
+            else if (microphoneDemo.microphoneRecord.vadIndicatorImage.color != Color.white)
             {
-                if(piperAudioSource.isPlaying)
-                {
-                    aiStartSpeak = true;
-                } 
-                else if(aiStartSpeak)
-                {
-                    isSpeaking = true;
-                    aiStartSpeak = false;
-                    PressSpeakButton();
-                }
+                isCalling = true;
             }
         }
 
@@ -53,14 +60,21 @@ namespace Whisper.Samples
             if (microphoneDemo.microphoneRecord.vadIndicatorImage.color == Color.red)
             {
                 isSpeaking = false;
+                microphoneDemo.microphoneRecord.vadIndicatorImage.color = Color.blue;
                 PressSpeakButton();
             }
         }
 
         public void PressSpeakButton()
         {
-            Debug.Log(8);
             microphoneDemo.button.onClick.Invoke();
+        }
+
+        public void ForceStop()
+        {
+            isCalling = false;
+            piperAudioSource.Stop();
+            microphoneDemo.microphoneRecord.vadIndicatorImage.color = Color.white;
         }
     }
 }

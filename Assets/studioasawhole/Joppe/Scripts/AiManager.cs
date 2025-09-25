@@ -9,8 +9,6 @@ public class AiManager : MonoBehaviour
     [SerializeField] ChatSample chatAi;
     [SerializeField] PiperSample piperAi;
 
-    private string playerTextInput;
-
     public void GetRecordedMessage(string text)
     {
         Debug.Log(1);
