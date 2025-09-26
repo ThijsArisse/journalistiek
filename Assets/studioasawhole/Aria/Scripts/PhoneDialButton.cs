@@ -32,13 +32,13 @@ public class PhoneDialButton : MonoBehaviour
     {
         if (_hover)
         {
-            print(_interactor.transform.position.y);
-            float yDiff = math.abs(_interactor.transform.position.y - _cubeRenderer.position.y);
-            float yDiffOrigin = math.abs(_pokeStartPos.y - _cubeRenderer.position.y);
-            print(yDiff);
-            var scale = _cubeRenderer.localScale;
-            scale.y = yDiff / yDiffOrigin;
-            _cubeRenderer.localScale = scale;
+            // print(_interactor.transform.position.y);
+            // float yDiff = math.abs(_interactor.transform.position.y - _cubeRenderer.position.y);
+            // float yDiffOrigin = math.abs(_pokeStartPos.y - _cubeRenderer.position.y);
+            // print(yDiff);
+            // var scale = _cubeRenderer.localScale;
+            // scale.y = yDiff / yDiffOrigin;
+            // _cubeRenderer.localScale = scale;
         }
     }
 

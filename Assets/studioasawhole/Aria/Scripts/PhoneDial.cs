@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class PhoneDial : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
+    [SerializeField] private List<string> _phoneKeys = new();
+    [SerializeField] private List<AudioSource> _phoneValues = new(); 
+    private Dictionary<string, AudioSource> _phoneNumbers = new();
 
     private List<PhoneDialButton> _dialButtons = new();
     private string _currentDial = "";
@@ -19,6 +23,19 @@ public class PhoneDial : MonoBehaviour
         foreach (var button in _dialButtons)
         {
             button.PressedButton += ButtonHandler;
+        }
+
+        try
+        {
+            for (int i = 0; i < _phoneKeys.Count; i++)
+            {
+                _phoneNumbers.Add(_phoneKeys[i], _phoneValues[i]);
+            }
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            Debug.LogError("Need as many Values as Keys!!!!!! pls", this);
+            throw;
         }
     }
 
@@ -43,6 +60,11 @@ public class PhoneDial : MonoBehaviour
                 print("*");
                 break;
             case PhoneDialButton.Sign.Call:
+                if (_phoneNumbers.TryGetValue(_currentDial, out AudioSource audio))
+                {
+                    audio.Play();
+                    _currentDial = "";
+                }
                 break;
             case PhoneDialButton.Sign.Hangup:
                 _currentDial = "";
