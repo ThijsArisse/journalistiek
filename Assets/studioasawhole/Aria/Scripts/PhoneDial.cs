@@ -32,7 +32,7 @@ public class PhoneDial : MonoBehaviour
                 _phoneNumbers.Add(_phoneKeys[i], _phoneValues[i]);
             }
         }
-        catch (IndexOutOfRangeException)
+        catch (ArgumentOutOfRangeException)
         {
             Debug.LogError("Need as many Values as Keys!!!!!! pls", this);
             throw;

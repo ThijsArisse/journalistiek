@@ -1844,7 +1844,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1698080056885332271, guid: d7c4a3b908bfbaa48b78d74f532f71d8,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 7087e64c0a9786843a669759edb78575, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2257,6 +2257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _phoneKeys.Array.data[1]
       value: 990
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719963686099103343, guid: e8e61a7add5a8bc4f9c5dab4da6e0bc1,
+        type: 3}
+      propertyPath: _phoneKeys.Array.data[2]
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 2719963686099103343, guid: e8e61a7add5a8bc4f9c5dab4da6e0bc1,
         type: 3}
