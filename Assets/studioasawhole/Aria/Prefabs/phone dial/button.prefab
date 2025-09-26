@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a98d42cdbb7044faa2071df49b367e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeRenderer: {fileID: 4543521303535551373}
-  buttonSign: 0
-  buttonNumber: 0
+  _cubeRenderer: {fileID: 616913718335630373}
+  _buttonSign: 0
+  _buttonNumber: 0
 --- !u!33 &5870205893429333805
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -267,10 +267,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3236023888997693522}
+        m_TargetAssemblyTypeName: PhoneDialButton, Assembly-CSharp
+        m_MethodName: OnHoverEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3236023888997693522}
+        m_TargetAssemblyTypeName: PhoneDialButton, Assembly-CSharp
+        m_MethodName: OnHoverExit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
