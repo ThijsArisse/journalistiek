@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Whisper.Samples
 {
@@ -73,8 +74,12 @@ namespace Whisper.Samples
         public void ForceStop()
         {
             isCalling = false;
-            piperAudioSource.Stop();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            /*piperAudioSource.Stop();
+            piperAudioSource.clip = null;
+            StopCoroutine(audioCheck);
             microphoneDemo.microphoneRecord.vadIndicatorImage.color = Color.white;
+            microphoneDemo.microphoneRecord.StopRecord();*/
         }
     }
 }
