@@ -47,6 +47,11 @@ public class PhoneDialButton : MonoBehaviour
         PressedButton?.Invoke(_buttonSign, _buttonNumber);
     }
 
+    public void SelectExit(SelectExitEventArgs args)
+    {
+        print("SELECT EXIT");
+    }
+
     public void OnHoverEnter(HoverEnterEventArgs args)
     {
         _interactor = args.interactorObject;
