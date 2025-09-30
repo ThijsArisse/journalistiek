@@ -557,6 +557,20 @@ PrefabInstance:
       objectReference: {fileID: 105820426}
     - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
+      propertyPath: debugMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
+        type: 3}
+      propertyPath: systemPrompt
+      value: 'Doe alsof je een 47 jarige man bent die in Twente leeft en geinterviewd
+        wordt door mij op de telefoon over de toename aan fietsdiefstallen de laatste
+        tijd.
+
+        Elk antwoord mag niet langer zijn dan 50 woorden.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
+        type: 3}
       propertyPath: modelDropdown
       value: 
       objectReference: {fileID: 1970803233}
