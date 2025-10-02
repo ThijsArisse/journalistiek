@@ -36,7 +36,6 @@ namespace Neocortex.Samples
 
         private void OnChatResponseReceived(ChatResponse response)
         {
-            Debug.Log(4);
             if (sayMessage)
             {
                 aiManager.GetGeneratedMessage(response.message);
@@ -49,7 +48,6 @@ namespace Neocortex.Samples
 
         private void OnUserMessageSent(string message)
         {
-            Debug.Log(2);
             request.Send(message);
             /*chatPanel.AddMessage(message, true);*/
         }

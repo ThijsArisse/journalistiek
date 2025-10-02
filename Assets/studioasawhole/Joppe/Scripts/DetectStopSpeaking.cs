@@ -7,6 +7,7 @@ namespace Whisper.Samples
 {
     public class DetectStopSpeaking : MonoBehaviour
     {
+        [SerializeField] private AiManager aiManager;
         [SerializeField] private MicrophoneDemo microphoneDemo;
         [SerializeField] private AudioSource piperAudioSource;
         [SerializeField] private float silentWaitTime;
@@ -74,12 +75,16 @@ namespace Whisper.Samples
         public void ForceStop()
         {
             isCalling = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            /*piperAudioSource.Stop();
+
+            aiManager.forceStop = true;
+            piperAudioSource.Stop();
             piperAudioSource.clip = null;
-            StopCoroutine(audioCheck);
+            if (audioCheck != null)
+            {
+                StopCoroutine(audioCheck);
+            }
+            microphoneDemo.button.onClick.Invoke();
             microphoneDemo.microphoneRecord.vadIndicatorImage.color = Color.white;
-            microphoneDemo.microphoneRecord.StopRecord();*/
         }
     }
 }

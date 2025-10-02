@@ -618,8 +618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2056819b5ca13014e993ddba6b7ca7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chatAi: {fileID: 2082604338}
+  chatAi: {fileID: 527112298}
   piperAi: {fileID: 1208902153}
+  forceStop: 0
 --- !u!4 &401314755
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c77eee22d8940f4482fe91789dfdd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aiManager: {fileID: 401314754}
   microphoneDemo: {fileID: 1678454324}
   piperAudioSource: {fileID: 1208902154}
   silentWaitTime: 3
@@ -669,7 +671,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1433280442}
+    m_TransformParent: {fileID: 893354908}
     m_Modifications:
     - target: {fileID: 1986933129154395315, guid: 34cf1ab44df9f2549b9b6dec813314c2,
         type: 3}
@@ -821,6 +823,50 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 515877878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &527112296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527112297}
+  - component: {fileID: 527112298}
+  m_Layer: 0
+  m_Name: Ollama (new)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527112297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527112296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1433280442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527112298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527112296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0818bb282e78c2e40b717100335e709c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &613521248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,6 +1068,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &893354907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893354908}
+  m_Layer: 0
+  m_Name: Ollama (old)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &893354908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893354907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 515877879}
+  - {fileID: 1446698020}
+  m_Father: {fileID: 1433280442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974746127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,8 +1788,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 515877879}
-  - {fileID: 1446698020}
+  - {fileID: 893354908}
+  - {fileID: 527112297}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1446698019
@@ -1719,7 +1798,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1433280442}
+    m_TransformParent: {fileID: 893354908}
     m_Modifications:
     - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
@@ -1736,6 +1815,11 @@ PrefabInstance:
       propertyPath: chatPanel
       value: 
       objectReference: {fileID: 1619926863}
+    - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
+        type: 3}
+      propertyPath: sayMessage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
       propertyPath: systemPrompt
@@ -1777,17 +1861,17 @@ PrefabInstance:
     - target: {fileID: 5067264798410381748, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5067264798410381748, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5067264798410381748, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5067264798410381748, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
         type: 3}
@@ -2594,18 +2678,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 143372695}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2082604338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1612759169437748968, guid: 5f86182d4f576bc44b0edb5e09aac1cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1446698019}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fc0949511d57104ca7df5da82899935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
