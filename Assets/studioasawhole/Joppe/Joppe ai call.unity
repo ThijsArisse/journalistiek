@@ -620,6 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatAi: {fileID: 527112298}
   piperAi: {fileID: 1208902153}
+  prompt: doe alsof jij mario bent
   forceStop: 0
 --- !u!4 &401314755
 Transform:

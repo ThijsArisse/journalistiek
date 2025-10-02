@@ -52,6 +52,8 @@ namespace Whisper.Samples
             else if (microphoneDemo.microphoneRecord.vadIndicatorImage.color != Color.white)
             {
                 isCalling = true;
+                aiStartSpeak = false;
+                isSpeaking = true;
             }
         }
 
@@ -79,11 +81,15 @@ namespace Whisper.Samples
             aiManager.forceStop = true;
             piperAudioSource.Stop();
             piperAudioSource.clip = null;
+            aiManager.llamaUtil.ResetConversation();
             if (audioCheck != null)
             {
                 StopCoroutine(audioCheck);
             }
-            microphoneDemo.button.onClick.Invoke();
+            if(microphoneDemo.microphoneRecord.IsRecording)
+            {
+                microphoneDemo.button.onClick.Invoke();
+            }
             microphoneDemo.microphoneRecord.vadIndicatorImage.color = Color.white;
         }
     }
