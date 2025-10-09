@@ -14,6 +14,8 @@ public class LLMCommunication : MonoBehaviour
     private List<ChatMessage> currentConv = new();
     private ChatClient chatClient;
 
+    [SerializeField] private string endpoint = "localhost:8080";
+
     void Start()
     {
         // Some Testing stuff ignore
@@ -34,7 +36,7 @@ public class LLMCommunication : MonoBehaviour
         chatClient = new ChatClient(
             "model",
             new ApiKeyCredential("sk-no-key-required"),
-            new OpenAIClientOptions() { Endpoint = new("http://localhost:8080/v1") }
+            new OpenAIClientOptions() { Endpoint = new($"http://{endpoint}/v1") }
         );
         // create system message
         currentConv.Add(

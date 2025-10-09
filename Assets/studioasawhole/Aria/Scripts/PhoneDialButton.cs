@@ -9,7 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PhoneDialButton : MonoBehaviour
 {
 
-    [SerializeField] private Transform _cubeRenderer;
+    // [SerializeField] private Transform _cubeRenderer;
     [SerializeField] private Sign _buttonSign = Sign.Number;
     [Header("only used when button sign is set to number")]
     [Range(0, 9)]
@@ -19,12 +19,12 @@ public class PhoneDialButton : MonoBehaviour
 
     private bool _hover;
     private IXRHoverInteractor _interactor;
-    private Vector3 _cubeStartScale;
+    // private Vector3 _cubeStartScale;
     private Vector3 _pokeStartPos;
     // Start is called before the first frame update
     void Start()
     {
-        _cubeStartScale = _cubeRenderer.localScale;
+        // _cubeStartScale = _cubeRenderer.localScale;
     }
 
     // Update is called once per frame
