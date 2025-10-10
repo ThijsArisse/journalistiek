@@ -5,13 +5,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.Events;
 
 public class PhoneDial : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
     [SerializeField] private List<string> _phoneKeys = new();
-    [SerializeField] private List<AudioSource> _phoneValues = new(); 
-    private Dictionary<string, AudioSource> _phoneNumbers = new();
+    [SerializeField] private List<UnityEvent> _phoneValues = new();
+    private Dictionary<string, UnityEvent> _phoneNumbers = new();
 
     private List<PhoneDialButton> _dialButtons = new();
     private string _currentDial = "";
@@ -60,9 +61,9 @@ public class PhoneDial : MonoBehaviour
                 print("*");
                 break;
             case PhoneDialButton.Sign.Call:
-                if (_phoneNumbers.TryGetValue(_currentDial, out AudioSource audio))
+                if (_phoneNumbers.TryGetValue(_currentDial, out UnityEvent unityEvent))
                 {
-                    audio.Play();
+                    unityEvent?.Invoke();
                     _currentDial = "";
                 }
                 break;
