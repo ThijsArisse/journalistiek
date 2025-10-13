@@ -70,7 +70,13 @@ public class PhoneDial : MonoBehaviour
             case PhoneDialButton.Sign.Hangup:
                 _currentDial = "";
                 return;
-                // break;
+            // break;
+            case PhoneDialButton.Sign.Backspace:
+                if (_currentDial.Length > 0)
+                {
+                    _currentDial.Remove(_currentDial.Length - 1);
+                }
+                break;
         }
     }
 }

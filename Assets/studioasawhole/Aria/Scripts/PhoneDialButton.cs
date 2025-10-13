@@ -72,5 +72,6 @@ public class PhoneDialButton : MonoBehaviour
         Star,
         Call,
         Hangup,
+        Backspace,
     }
 }
