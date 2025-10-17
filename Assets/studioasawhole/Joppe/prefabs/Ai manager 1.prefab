@@ -617,9 +617,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1672660144659234740}
         m_TargetAssemblyTypeName: Whisper.Samples.MicrophoneDemo, Assembly-CSharp
-        m_MethodName: OnButtonPressed
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0818bb282e78c2e40b717100335e709c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endpoint: localhost:8080
+  endpoint: 172.29.250.9:8080
 --- !u!114 &2674674971836128040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   piper: {fileID: 2674674971836128040}
   input: {fileID: 5335564807263427308}
   submitButton: {fileID: 6112301180497103642}
-  timerText: {fileID: 0}
+  timerText: {fileID: 339479097151501785}
 --- !u!82 &7529045139626622549
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiManager: {fileID: 8317001550552729217}
-  microphoneDemo: {fileID: 0}
+  microphoneDemo: {fileID: 4359311290596611395}
   piperAudioSource: {fileID: 7529045139626622549}
   silentWaitTime: 3
 --- !u!114 &4359311290596611395
