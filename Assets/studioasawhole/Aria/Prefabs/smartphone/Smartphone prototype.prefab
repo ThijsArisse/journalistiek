@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5975e8f4014247408fffda10bd76b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 7157925203539365062}
+  _textDisplay: {fileID: 7157925203539365062}
   _phoneKeys:
   - 112
   - 899
