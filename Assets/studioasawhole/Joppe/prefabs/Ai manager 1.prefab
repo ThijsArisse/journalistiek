@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4256343362908875061}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Whisper.Samples.MicrophoneDemo, Assembly-CSharp
         m_MethodName: OnButtonPressed
         m_Mode: 1
@@ -1240,7 +1240,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8821986809339663334}
-  - component: {fileID: 4256343362908875061}
   - component: {fileID: 6434527969458856372}
   - component: {fileID: 847481456295023720}
   - component: {fileID: 5552875939909516203}
@@ -1249,13 +1248,14 @@ GameObject:
   - component: {fileID: 7529045139626622549}
   - component: {fileID: 8317001550552729217}
   - component: {fileID: 4986721498300095469}
+  - component: {fileID: 4359311290596611395}
   m_Layer: 0
   m_Name: Ai manager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8821986809339663334
 Transform:
   m_ObjectHideFlags: 0
@@ -1272,31 +1272,6 @@ Transform:
   - {fileID: 2652261988152502590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4256343362908875061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672660144659234740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c774d83cf4f4d45e29298522e8ba4923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whisper: {fileID: 847481456295023720}
-  microphoneRecord: {fileID: 6434527969458856372}
-  streamSegments: 1
-  printLanguage: 1
-  button: {fileID: 0}
-  buttonText: {fileID: 0}
-  outputText: {fileID: 0}
-  timeText: {fileID: 2857227849518500571}
-  languageDropdown: {fileID: 6113990544209797232}
-  translateToggle: {fileID: 1370399382350032678}
-  vadToggle: {fileID: 9206208256913087921}
-  scroll: {fileID: 1959488745072193481}
-  aiManager: {fileID: 8317001550552729217}
 --- !u!114 &6434527969458856372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,6 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0818bb282e78c2e40b717100335e709c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endpoint: localhost:8080
 --- !u!114 &2674674971836128040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,9 +1504,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiManager: {fileID: 8317001550552729217}
-  microphoneDemo: {fileID: 4256343362908875061}
+  microphoneDemo: {fileID: 0}
   piperAudioSource: {fileID: 7529045139626622549}
   silentWaitTime: 3
+--- !u!114 &4359311290596611395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672660144659234740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ac5ea51c5e90b4bae062fb079c5c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whisper: {fileID: 847481456295023720}
+  microphoneRecord: {fileID: 6434527969458856372}
+  streamSegments: 1
+  printLanguage: 1
+  button: {fileID: 6112301180497103642}
+  buttonText: {fileID: 4010044920709130988}
+  outputText: {fileID: 4596176487264652851}
+  timeText: {fileID: 7712040864889720610}
+  languageDropdown: {fileID: 6113990544209797232}
+  translateToggle: {fileID: 1370399382350032678}
+  vadToggle: {fileID: 9206208256913087921}
+  scroll: {fileID: 1959488745072193481}
+  aiManager: {fileID: 8317001550552729217}
 --- !u!1 &1765766405756107015
 GameObject:
   m_ObjectHideFlags: 0
