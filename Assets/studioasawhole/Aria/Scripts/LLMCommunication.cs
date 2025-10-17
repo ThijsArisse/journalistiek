@@ -60,7 +60,7 @@ public class LLMCommunication : MonoBehaviour
         print("coroutine stopped");
     }
 
-    ChatMessageContentPart MessageChatBot(string message)
+    public ChatMessageContentPart MessageChatBot(string message)
     {
         // add the message to the context
         currentConv.Add(new UserChatMessage(message));
