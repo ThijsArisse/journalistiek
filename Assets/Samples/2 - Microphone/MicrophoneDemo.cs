@@ -122,6 +122,4 @@ namespace Whisper.Samples
             UiUtils.ScrollDown(scroll);
         }
     }
-
-
 }
