@@ -1,21 +1,32 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Rendering;
 using UnityEngine.Events;
 
 public class PhoneDial : MonoBehaviour
 {
-    [SerializeField] private TMP_Text text;
+    [Tooltip("Where to display the numbers to.")]
+    [SerializeField] private TMP_Text _textDisplay;
+    [Tooltip("Key values for the phone number.")]
     [SerializeField] private List<string> _phoneKeys = new();
+    [Tooltip("Event that gets called when its phone number is being called.")]
     [SerializeField] private List<UnityEvent> _phoneValues = new();
     private Dictionary<string, UnityEvent> _phoneNumbers = new();
 
+    //all the buttons under this object
     private List<PhoneDialButton> _dialButtons = new();
     private string _currentDial = "";
+
+    public string CurrentDial
+    {
+        get => _currentDial;
+        set
+        {
+            _currentDial = value;
+            _textDisplay.text = value;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +34,7 @@ public class PhoneDial : MonoBehaviour
         GetComponentsInChildren<PhoneDialButton>(false, _dialButtons);
         foreach (var button in _dialButtons)
         {
+            //couldve done it differently but this works
             button.PressedButton += ButtonHandler;
         }
 
@@ -35,46 +47,38 @@ public class PhoneDial : MonoBehaviour
         }
         catch (ArgumentOutOfRangeException)
         {
-            Debug.LogError("Need as many Values as Keys!!!!!! pls", this);
+            Debug.LogError("Need as many Values as Keys!", this);
             throw;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        text.text = _currentDial;
-    }
-
+    //handles the buttons on their button presses like.. numbers yea
     void ButtonHandler(PhoneDialButton.Sign sign, int number)
     {
         switch (sign)
         {
             case PhoneDialButton.Sign.Number:
-                print($"number: {number}");
-                _currentDial += number.ToString();
+                CurrentDial += number.ToString();
                 break;
             case PhoneDialButton.Sign.Hashtag:
-                print("#");
                 break;
             case PhoneDialButton.Sign.Star:
-                print("*");
                 break;
             case PhoneDialButton.Sign.Call:
-                if (_phoneNumbers.TryGetValue(_currentDial, out UnityEvent unityEvent))
+                if (_phoneNumbers.TryGetValue(CurrentDial, out UnityEvent unityEvent))
                 {
                     unityEvent?.Invoke();
-                    _currentDial = "";
+                    CurrentDial = "";
                 }
                 break;
             case PhoneDialButton.Sign.Hangup:
-                _currentDial = "";
+                CurrentDial = "";
                 return;
             // break;
             case PhoneDialButton.Sign.Backspace:
-                if (_currentDial.Length > 0)
+                if (CurrentDial.Length > 0)
                 {
-                    _currentDial.Remove(_currentDial.Length - 1);
+                    CurrentDial.Remove(CurrentDial.Length - 1);
                 }
                 break;
         }
