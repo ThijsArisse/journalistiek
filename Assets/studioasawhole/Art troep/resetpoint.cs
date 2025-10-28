@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class resetpoint : MonoBehaviour
+
+
+
 {
-    // Start is called before the first frame update
+[SerializeField] Transform resetTransform;
+[SerializeField] GameObject player;
+[SerializeField] Camera playerhead;
+    [SerializeField] InputActionReference inputRef;
+
+
+
     void Start()
     {
-        
+        inputRef.action.started += (_) => OnResetCamera();
+        OnResetCamera();
     }
 
-    // Update is called once per frame
-    void Update()
+   [ContextMenu("Reset Position")]
+   public void OnResetCamera()
     {
-        
+        print("reset");
+        var distanceDiff = resetTransform.position -
+            playerhead.transform.position;
+        player.transform.position += distanceDiff;
+
+
     }
 }

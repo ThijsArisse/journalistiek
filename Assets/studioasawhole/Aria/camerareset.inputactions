@@ -273,7 +273,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "0086caea-37e3-4bda-ba72-365d80ee0c57",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -282,7 +282,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "0545848b-2607-49c5-b57f-81062c6f3f59",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -794,6 +794,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "ResetCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "645cff85-4fa9-4168-a7f5-6895537f6ce3",
+                    "path": "<XRController>{LeftHand}/menuButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "ResetCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa4b072f-efa4-4a32-88c0-bd365b1f28ac",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR;Gamepad",
                     "action": "ResetCamera",
                     "isComposite": false,
                     "isPartOfComposite": false

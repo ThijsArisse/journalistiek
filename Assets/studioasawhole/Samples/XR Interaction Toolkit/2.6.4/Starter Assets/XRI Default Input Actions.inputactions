@@ -723,7 +723,7 @@
                     "name": "UI Press",
                     "type": "Button",
                     "id": "7e1eced7-c774-4fe5-be8f-d8711f646d9e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -768,7 +768,7 @@
                     "name": "Scale Toggle",
                     "type": "Button",
                     "id": "80ed7d74-56de-473c-bf76-da3bdd16b562",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -781,6 +781,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ResetCamera",
+                    "type": "Button",
+                    "id": "07d779d0-647a-425f-922d-025427ac5bda",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -946,6 +955,17 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Scale Delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cb991d4-c1b9-49bf-92ed-32db993d7003",
+                    "path": "<XRController>{LeftHand}/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Generic XR Controller",
+                    "action": "ResetCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -2736,9 +2756,9 @@
             "id": "3839f40a-9520-4411-b669-571d79eaeaa2",
             "actions": [
                 {
-                    "name": "ResetPosition",
+                    "name": "ResetCamera",
                     "type": "Button",
-                    "id": "d023505a-c7b4-4104-b322-a299e0e26c2e",
+                    "id": "999ca95f-c5ec-4de4-8300-766d66e245ce",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -2748,23 +2768,45 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "58aa0b10-92e9-4698-9c3b-e0b85011e5a2",
-                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "id": "a53a6c4a-29ae-4d4e-a1de-64afc724c81e",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ResetPosition",
+                    "action": "ResetCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "705a4fa1-4d97-4dff-b3d1-7d1ba9f6a805",
-                    "path": "<Keyboard>/q",
+                    "id": "e011fb12-27db-48b1-81c3-ee531ce8d6a9",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Generic XR Controller",
+                    "action": "ResetCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3462db35-a7d2-4bc4-af99-f3ba9f27ead6",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ResetPosition",
+                    "action": "ResetCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2192f37-18b7-465e-bd3f-0b09448df98f",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
