@@ -135,20 +135,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ai manager 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+    - target: {fileID: 8174543871096566995, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
-      propertyPath: microphoneDemo
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 30672813}
-    - target: {fileID: 5552875939909516203, guid: 8da78ec4e7bd12c44942879771bdd270,
+    - target: {fileID: 8174543871096566995, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
-      propertyPath: endpoint
-      value: 172.29.250.9:8080
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529045139626622549, guid: 8da78ec4e7bd12c44942879771bdd270,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
