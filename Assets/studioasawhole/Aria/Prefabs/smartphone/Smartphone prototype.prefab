@@ -556,6 +556,7 @@ Transform:
   - {fileID: 5025873853410451753}
   - {fileID: 6495127135453832184}
   - {fileID: 2289783339160491820}
+  - {fileID: 1721890779793843457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1991711524816818683
@@ -574,6 +575,7 @@ MonoBehaviour:
   _phoneKeys:
   - 112
   - 899
+  - 777
   _phoneValues:
   - m_PersistentCalls:
       m_Calls:
@@ -594,6 +596,20 @@ MonoBehaviour:
       - m_Target: {fileID: 6396729014862830270}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5906469039716361124}
+        m_TargetAssemblyTypeName: Whisper.Samples.MicrophoneDemo, Assembly-CSharp
+        m_MethodName: OnButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -649,6 +665,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2935493743463476490}
+        m_TargetAssemblyTypeName: Whisper.Samples.DetectStopSpeaking, Assembly-CSharp
+        m_MethodName: ForceStop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1129,6 +1157,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5025873853410451753}
     m_Modifications:
+    - target: {fileID: 182346884218161851, guid: 433ac55ecb9695c4eb607de847ee1d33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2085919567624014040, guid: 433ac55ecb9695c4eb607de847ee1d33,
         type: 3}
       propertyPath: m_Name
@@ -1256,3 +1289,117 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5922769007348837262}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7892730736493377255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7179004968771132536}
+    m_Modifications:
+    - target: {fileID: 847481456295023720, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: language
+      value: nl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672660144659234740, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_Name
+      value: Ai manager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552875939909516203, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: endpoint
+      value: 172.29.250.8:8080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: prompt
+      value: "doe alsof jij mario bent die een telefoon gesprek voert. je spreekt
+        alleen met \xE9\xE9n korte zin.bent"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8da78ec4e7bd12c44942879771bdd270, type: 3}
+--- !u!4 &1721890779793843457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 7892730736493377255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2935493743463476490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 7892730736493377255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c77eee22d8940f4482fe91789dfdd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5906469039716361124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4359311290596611395, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 7892730736493377255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ac5ea51c5e90b4bae062fb079c5c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
