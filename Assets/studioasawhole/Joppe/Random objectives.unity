@@ -575,7 +575,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: aiManager2
+      value: 
+      objectReference: {fileID: 1628306413}
+    - target: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: microphoneDemo2
+      value: 
+      objectReference: {fileID: 361953414}
+    - target: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: piperAudioSource
+      value: 
+      objectReference: {fileID: 1832287874}
+    - target: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: piperAudioSource2
+      value: 
+      objectReference: {fileID: 1628306414}
     - target: {fileID: 5552875939909516203, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: endpoint
+      value: 127.0.0.1:8080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552875939909516203, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529045139626622549, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -589,6 +619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245697383810245648, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: _source
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
@@ -662,6 +697,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9370225a2ca94276b870d5f87b0db55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1628306413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 1600485951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056819b5ca13014e993ddba6b7ca7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &1628306414 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7529045139626622549, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 1600485951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1740051727
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +905,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804188627}
   m_CullTransparentMesh: 1
+--- !u!114 &1832287874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245697383810245648, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 1600485951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f212905d072e9641ae158ce555c599e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863362964
 GameObject:
   m_ObjectHideFlags: 0

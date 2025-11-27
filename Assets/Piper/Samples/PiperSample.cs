@@ -11,7 +11,7 @@ namespace Piper.Samples
         public Button submitButton;
         public Text timerText;
 
-        private AudioSource _source;
+        public AudioSource _source;
 
         private void Awake()
         {
@@ -22,7 +22,10 @@ namespace Piper.Samples
 
         public void SayMessage(string text)
         {
-            input.onSubmit.Invoke(text);
+            if(!_source.isPlaying)
+            {
+                input.onSubmit.Invoke(text);
+            }
         }
 
         private void OnButtonPressed()
@@ -33,18 +36,21 @@ namespace Piper.Samples
 
         private async void OnInputSubmit(string text)
         {
-            var sw = new System.Diagnostics.Stopwatch();
-            sw.Start();
+            if(text.Length > 0)
+            {
+                var sw = new System.Diagnostics.Stopwatch();
+                sw.Start();
 
-            var audio = piper.TextToSpeech(text);
-            timerText.text = $"Time: {sw.ElapsedMilliseconds} ms";
+                var audio = piper.TextToSpeech(text);
+                timerText.text = $"Time: {sw.ElapsedMilliseconds} ms";
 
-            _source.Stop();
-            if (_source && _source.clip)
-                Destroy(_source.clip);
+                _source.Stop();
+                if (_source && _source.clip)
+                    Destroy(_source.clip);
 
-            _source.clip = await audio;
-            _source.Play();
+                _source.clip = await audio;
+                _source.Play();
+            }
         }
 
         private void OnDestroy()

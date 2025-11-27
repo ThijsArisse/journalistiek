@@ -166,11 +166,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1288425444}
+      objectReference: {fileID: 1288425457}
     - target: {fileID: 8174543871096566995, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PressSpeakButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174543871096566995, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Whisper.Samples.DetectStopSpeaking, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8245697383810245648, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
@@ -232,22 +237,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da78ec4e7bd12c44942879771bdd270, type: 3}
---- !u!1 &1288425444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1672660144659234740, guid: 8da78ec4e7bd12c44942879771bdd270,
-    type: 3}
-  m_PrefabInstance: {fileID: 1288425443}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1288425456 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4359311290596611395, guid: 8da78ec4e7bd12c44942879771bdd270,
     type: 3}
   m_PrefabInstance: {fileID: 1288425443}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288425444}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ac5ea51c5e90b4bae062fb079c5c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1288425457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4986721498300095469, guid: 8da78ec4e7bd12c44942879771bdd270,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288425443}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c77eee22d8940f4482fe91789dfdd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1396374175
