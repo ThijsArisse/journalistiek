@@ -16,7 +16,7 @@ public class AiManager : MonoBehaviour
 
     private void Start()
     {
-         llamaUtil = new(prompt);
+         llamaUtil = new(prompt, "http://" + chatAi.endpoint + "/v1");
     }
 
     public void GetRecordedMessage(string text)
