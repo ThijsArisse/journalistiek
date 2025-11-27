@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Whisper;
 
 public class RandomObjectiveGenerator : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class RandomObjectiveGenerator : MonoBehaviour
     {
         public string name;
         public string description;
+        public string prompt;
         public float weight;
     }
 
@@ -17,12 +19,15 @@ public class RandomObjectiveGenerator : MonoBehaviour
     [SerializeField] private TextMeshProUGUI objectiveNameDescriptionText;
     [SerializeField] private List<Objective> objectives;
 
+    [SerializeField] private WhisperManager whisperManager;
+
     private Objective currentObjective;
 
     private void Start()
     {
         currentObjective = GetRandomObjective(CalculateWeights());
         DisplayObjective(currentObjective);
+        whisperManager.initialPrompt = currentObjective.prompt;
     }
 
     private Objective GetRandomObjective(float totalWeight)
