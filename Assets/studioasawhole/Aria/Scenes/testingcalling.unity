@@ -130,10 +130,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 847481456295023720, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: language
+      value: nl
+      objectReference: {fileID: 0}
     - target: {fileID: 1672660144659234740, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: m_Name
       value: Ai manager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552875939909516203, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: endpoint
+      value: 127.0.0.1:8080
       objectReference: {fileID: 0}
     - target: {fileID: 8174543871096566995, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
