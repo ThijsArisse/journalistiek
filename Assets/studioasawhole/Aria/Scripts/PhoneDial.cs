@@ -44,7 +44,7 @@ public class PhoneDial : MonoBehaviour
     void Start()
     {
         ChangeState(phoneState);
-        GetComponentsInChildren<PhoneDialButton>(false, _dialButtons);
+        GetComponentsInChildren<PhoneDialButton>(true, _dialButtons);
         foreach (var button in _dialButtons)
         {
             //couldve done it differently but this works

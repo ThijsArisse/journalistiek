@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/studioasawhole/Art troep/Scenes/thijs.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    guid: b0cea9d8dbb8d4f4c87f9360cd8558ad
+  - enabled: 1
+    path: Assets/studioasawhole/Aria/Scenes/thijs-copy.unity
+    guid: 34e20fe4486af1549816235ef1809c97
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3bd9669937be1e24aaf488b81be09d2e,
       type: 2}
