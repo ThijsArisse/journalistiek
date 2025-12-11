@@ -1315,8 +1315,10 @@ PrefabInstance:
     - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: prompt
-      value: "doe alsof jij mario bent die een telefoon gesprek voert. je spreekt
-        alleen met \xE9\xE9n korte zin.bent"
+      value: jou naam is Mario. je bent gebeld door iemand vanuit een krant. je gaat
+        bevraagt worden over jou diefstal van chocolade letters. je zegt niks over
+        de chocolade letters totdat er word gepraat over jou moeder. anders ga je
+        steeds small talk proberen te maken.
       objectReference: {fileID: 0}
     - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
