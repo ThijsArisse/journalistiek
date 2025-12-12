@@ -14,7 +14,7 @@ public class LLMCommunication : MonoBehaviour
     private List<ChatMessage> currentConv = new();
     private ChatClient chatClient;
 
-    [SerializeField] private string endpoint = "localhost:8080";
+    [SerializeField] public string endpoint = "localhost:8080";
 
     void Start()
     {

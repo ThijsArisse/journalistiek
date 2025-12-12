@@ -9,14 +9,14 @@ public class AiManager : MonoBehaviour
 {
     [SerializeField] LLMCommunication chatAi;
     [SerializeField] PiperSample piperAi;
-    [SerializeField] public string prompt;
+    [SerializeField] [TextArea] public string prompt;
     public bool forceStop = false;
     public LlamaUtil llamaUtil;
     private Coroutine sentMessage;
 
     private void Start()
     {
-         llamaUtil = new(prompt);
+         llamaUtil = new(prompt, "http://" + chatAi.endpoint + "/v1");
     }
 
     public void GetRecordedMessage(string text)

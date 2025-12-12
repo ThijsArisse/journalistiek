@@ -2653,61 +2653,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 3110758160948346802}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991711524816818683, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: _startCall.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2822617808604861886, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5675463259461542742, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5815893754795614517, guid: 54afa508c34838c4ab335f65c4721dc9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7179004968771132536, guid: 54afa508c34838c4ab335f65c4721dc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2773,12 +2718,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54afa508c34838c4ab335f65c4721dc9, type: 3}
---- !u!1 &3110758160948346802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5675463259461542742, guid: 54afa508c34838c4ab335f65c4721dc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2581070471343432628}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3687892501442451693
 PrefabInstance:
   m_ObjectHideFlags: 0
