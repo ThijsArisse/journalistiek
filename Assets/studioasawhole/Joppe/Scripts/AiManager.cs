@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class AiManager : MonoBehaviour
 {
-    [SerializeField] LLMCommunication chatAi;
+    [SerializeField] string endpoint = "127.0.0.1:8080";
     [SerializeField] PiperManager piperAi;
     [SerializeField] [TextArea] public string prompt;
     public bool forceStop = false;
@@ -16,7 +16,7 @@ public class AiManager : MonoBehaviour
 
     private void Start()
     {
-        llamaUtil = new(prompt, "http://" + chatAi.endpoint + "/v1");
+        llamaUtil = new(prompt, "http://" + endpoint + "/v1");
     }
 
     public void GetRecordedMessage(string text)

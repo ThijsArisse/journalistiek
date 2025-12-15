@@ -1240,11 +1240,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8821986809339663334}
+  - component: {fileID: 8317001550552729217}
   - component: {fileID: 6434527969458856372}
   - component: {fileID: 847481456295023720}
-  - component: {fileID: 5552875939909516203}
   - component: {fileID: 7529045139626622549}
-  - component: {fileID: 8317001550552729217}
   - component: {fileID: 4986721498300095469}
   - component: {fileID: 4359311290596611395}
   - component: {fileID: 7442509461046589008}
@@ -1274,6 +1273,22 @@ Transform:
   - {fileID: 2652261988152502590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8317001550552729217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672660144659234740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056819b5ca13014e993ddba6b7ca7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endpoint: 127.0.0.1:8080
+  piperAi: {fileID: 7442509461046589008}
+  prompt: o
+  forceStop: 0
 --- !u!114 &6434527969458856372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,19 +1351,6 @@ MonoBehaviour:
   useVad: 1
   tokensTimestamps: 0
   audioCtx: 0
---- !u!114 &5552875939909516203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672660144659234740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818bb282e78c2e40b717100335e709c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endpoint: 127.0.0.1:8080
 --- !u!82 &7529045139626622549
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1445,22 +1447,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8317001550552729217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672660144659234740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2056819b5ca13014e993ddba6b7ca7f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chatAi: {fileID: 5552875939909516203}
-  piperAi: {fileID: 7442509461046589008}
-  prompt: o
-  forceStop: 0
 --- !u!114 &4986721498300095469
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1320,6 +1320,11 @@ PrefabInstance:
         de chocolade letters totdat er word gepraat over jou moeder. anders ga je
         steeds small talk proberen te maken.
       objectReference: {fileID: 0}
+    - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: endpoint
+      value: 172.29.250.19:8080
+      objectReference: {fileID: 0}
     - target: {fileID: 8821986809339663334, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: m_LocalPosition.x
