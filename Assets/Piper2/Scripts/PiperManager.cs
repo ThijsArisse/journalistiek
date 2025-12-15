@@ -162,6 +162,18 @@ public class PiperManager : MonoBehaviour
         SynthesizeAndPlay(textField.text);
     }
 
+    public void SayMessage(String textField)
+    {
+        if (string.IsNullOrEmpty(textField))
+        {
+            Debug.LogError("Input text is empty. Please enter some text.");
+            return;
+        }
+
+        Debug.Log($"Input text: {textField}");
+        SynthesizeAndPlay(textField);
+    }
+
     public void SynthesizeAndPlay(string text)
     {
         if (!isInitialized)
