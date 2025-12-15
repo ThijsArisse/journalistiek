@@ -1302,6 +1302,11 @@ PrefabInstance:
       propertyPath: language
       value: nl
       objectReference: {fileID: 0}
+    - target: {fileID: 847481456295023720, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: modelPath
+      value: Whisper/ggml-base.bin
+      objectReference: {fileID: 0}
     - target: {fileID: 1672660144659234740, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: m_Name
@@ -1318,7 +1323,8 @@ PrefabInstance:
       value: jou naam is Mario. je bent gebeld door iemand vanuit een krant. je gaat
         bevraagt worden over jou diefstal van chocolade letters. je zegt niks over
         de chocolade letters totdat er word gepraat over jou moeder. anders ga je
-        steeds small talk proberen te maken.
+        steeds small talk proberen te maken. Alleen nederlands en maximaal 12 woorden
+        antwoorden.
       objectReference: {fileID: 0}
     - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
