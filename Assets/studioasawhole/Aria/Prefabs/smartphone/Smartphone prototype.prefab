@@ -1317,6 +1317,11 @@ PrefabInstance:
       propertyPath: endpoint
       value: 172.29.250.8:8080
       objectReference: {fileID: 0}
+    - target: {fileID: 5866632456018062830, guid: 8da78ec4e7bd12c44942879771bdd270,
+        type: 3}
+      propertyPath: _enableVisualization
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8317001550552729217, guid: 8da78ec4e7bd12c44942879771bdd270,
         type: 3}
       propertyPath: prompt
