@@ -16215,6 +16215,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.293
       objectReference: {fileID: 0}
+    - target: {fileID: 7370782000427082383, guid: 54afa508c34838c4ab335f65c4721dc9,
+        type: 3}
+      propertyPath: useGpu
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370782000427082383, guid: 54afa508c34838c4ab335f65c4721dc9,
+        type: 3}
+      propertyPath: modelPath
+      value: Whisper/ggml-tiny.bin
+      objectReference: {fileID: 0}
     - target: {fileID: 7389809720800598116, guid: 54afa508c34838c4ab335f65c4721dc9,
         type: 3}
       propertyPath: m_IsActive

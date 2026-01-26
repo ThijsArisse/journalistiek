@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class AiManager : MonoBehaviour
 {
+    static public string Endpoint;
+
     [SerializeField] string endpoint = "127.0.0.1:8080";
     [SerializeField] PiperManager piperAi;
     [SerializeField] [TextArea] public string prompt;
@@ -16,6 +18,7 @@ public class AiManager : MonoBehaviour
 
     private void Start()
     {
+        Endpoint = endpoint;
         llamaUtil = new(prompt, "http://" + endpoint + "/v1");
     }
 
