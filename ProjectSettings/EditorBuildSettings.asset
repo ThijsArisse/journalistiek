@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/studioasawhole/Art troep/Scenes/thijs.unity
     guid: b0cea9d8dbb8d4f4c87f9360cd8558ad
   - enabled: 0
@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Piper2/Scenes/PiperScene 1.unity
     guid: 789584af36e692245ab2495f4d19397b
+  - enabled: 1
+    path: Assets/studioasawhole/Art troep/Scenes/David2.unity
+    guid: c21ddd03e3ecc5549b80a13ee96bb3b2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3bd9669937be1e24aaf488b81be09d2e,
       type: 2}
