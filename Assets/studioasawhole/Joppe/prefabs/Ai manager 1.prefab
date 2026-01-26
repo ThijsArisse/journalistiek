@@ -1248,8 +1248,10 @@ GameObject:
   - component: {fileID: 4359311290596611395}
   - component: {fileID: 7442509461046589008}
   - component: {fileID: 6393338323935545377}
-  - component: {fileID: 2350928849729767399}
   - component: {fileID: 5866632456018062830}
+  - component: {fileID: 8384483350802185850}
+  - component: {fileID: 4319420415500482123}
+  - component: {fileID: 2653242609533981334}
   m_Layer: 0
   m_Name: Ai manager 1
   m_TagString: Untagged
@@ -1462,6 +1464,8 @@ MonoBehaviour:
   aiManager: {fileID: 8317001550552729217}
   microphoneDemo: {fileID: 4359311290596611395}
   piperAudioSource: {fileID: 7529045139626622549}
+  piperManager: {fileID: 7442509461046589008}
+  stopButton: {fileID: 1581887219491908920}
   silentWaitTime: 3
 --- !u!114 &4359311290596611395
 MonoBehaviour:
@@ -1504,6 +1508,8 @@ MonoBehaviour:
     type: 3}
   tokenizer: {fileID: 6393338323935545377}
   voiceNameText: {fileID: 2343085688311729984}
+  isSpeaking: 0
+  stopPlaying: 0
   commaDelay: 0.1
   periodDelay: 0.4
   questionExclamationDelay: 0.5
@@ -1520,7 +1526,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: c4708139a8debcd45ad36b578951ee1e, type: 3}
---- !u!120 &2350928849729767399
+--- !u!114 &5866632456018062830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672660144659234740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e525749ca13446cb150be6bf457fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableVisualization: 1
+  _Scalar: 50
+  _visualizerWidth: 10
+  _lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _lineWidth: 0.05
+  _SmoothDownRate: 10
+--- !u!114 &8384483350802185850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672660144659234740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7a3d2d14e554c2792464d4165f92dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: c4708139a8debcd45ad36b578951ee1e, type: 3}
+--- !u!120 &4319420415500482123
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
@@ -1624,7 +1661,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &5866632456018062830
+--- !u!114 &2653242609533981334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3760,20 +3797,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7361624261397499054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6951905247759190699, guid: 30e31773290a5cd4bbf8d3b1136f673d,
-          type: 3}
-        m_TargetAssemblyTypeName: Whisper.Samples.DetectStopSpeaking, Assembly-CSharp
-        m_MethodName: ForceStop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5029729621519642974
 GameObject:
   m_ObjectHideFlags: 0

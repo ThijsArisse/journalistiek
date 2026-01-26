@@ -26,6 +26,8 @@ public class PiperManager : MonoBehaviour
 
     private bool hasSidKey = false;
 
+    public bool isSpeaking = false;
+    public bool stopPlaying = false;
 
     [Range(0.0f, 1.0f)] public float commaDelay = 0.1f;
     [Range(0.0f, 1.0f)] public float periodDelay = 0.5f;
@@ -193,6 +195,12 @@ public class PiperManager : MonoBehaviour
 
         foreach (string part in parts)
         {
+            isSpeaking = true;
+            if (stopPlaying)
+            {
+                break;
+            }
+
             if (string.IsNullOrEmpty(part.Trim()))
             {
                 continue;
@@ -237,6 +245,8 @@ public class PiperManager : MonoBehaviour
                 }
             }
         }
+        stopPlaying = false;
+        isSpeaking = false;
         Debug.Log("Finished playing all chunks.");
     }
 
