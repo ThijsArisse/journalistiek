@@ -30,14 +30,15 @@ namespace Whisper.Samples
         private string _buffer;
 
         [SerializeField] private AiManager aiManager;
+        private STTUtil sttUtil;
 
         private void Awake()
         {
             whisper.OnNewSegment += OnNewSegment;
             whisper.OnProgress += OnProgressHandler;
-            
+
             microphoneRecord.OnRecordStop += OnRecordStop;
-            
+
             button.onClick.AddListener(OnButtonPressed);
             languageDropdown.value = languageDropdown.options
                 .FindIndex(op => op.text == whisper.language);
@@ -48,6 +49,8 @@ namespace Whisper.Samples
 
             vadToggle.isOn = microphoneRecord.vadStop;
             vadToggle.onValueChanged.AddListener(OnVadChanged);
+
+            sttUtil = new();
         }
 
         private void OnVadChanged(bool vadStop)
@@ -71,23 +74,26 @@ namespace Whisper.Samples
         
         private async void OnRecordStop(AudioChunk recordedAudio)
         {
+            print("WE START");
             buttonText.text = "Record";
             _buffer = "";
 
             var sw = new Stopwatch();
             sw.Start();
-            
-            var res = await whisper.GetTextAsync(recordedAudio.Data, recordedAudio.Frequency, recordedAudio.Channels);
-            if (res == null || !outputText) 
+
+            // var res = await whisper.GetTextAsync(recordedAudio.Data, recordedAudio.Frequency, recordedAudio.Channels);
+            var res = await sttUtil.TranscribeFromData(recordedAudio);
+            print("WE STOP: " + res);
+            if (res == null || !outputText)
                 return;
 
             var time = sw.ElapsedMilliseconds;
             var rate = recordedAudio.Length / (time * 0.001f);
             timeText.text = $"Time: {time} ms\nRate: {rate:F1}x";
 
-            var text = res.Result;
-            if (printLanguage)
-                text += $"\n\nLanguage: {res.Language}";
+            var text = res;
+            // if (printLanguage)
+            //     text += $"\n\nLanguage: {res.Language}";
             
             outputText.text = text;
             aiManager.GetRecordedMessage(text);

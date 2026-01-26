@@ -76,7 +76,9 @@ public class LlamaUtil
     /// <returns></returns>
     public Task<ChatMessageContentPart> MessageAsync(string message)
     {
+#pragma warning disable CS0618 // Type or member is obsolete
         return Task.Run(() => Message(message));
+#pragma warning restore CS0618 // Type or member is obsolete
     }
 
 
