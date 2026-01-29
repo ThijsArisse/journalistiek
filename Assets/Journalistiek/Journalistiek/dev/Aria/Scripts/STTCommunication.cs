@@ -1,15 +1,10 @@
 using UnityEngine;
-using OpenAI;
 using System;
-using System.ClientModel;
 using OpenAI.Audio;
 using System.Collections;
-using System.Threading.Tasks;
 using System.IO;
 using UnityEngine.Networking;
 using System.Collections.Generic;
-using NUnit.Framework.Internal;
-using Mono.Cecil.Cil;
 using UnityEngine.Events;
 
 public class STTCommunication : MonoBehaviour
